@@ -6,10 +6,8 @@ import Products from './Body/Products.js';
 
 export default function Index() {
   return <>
-    <Header/>
-    <div className='m-14'></div>
-
     <main>
+      <div className='m-14'></div>
       <Products />
     </main>
   </>

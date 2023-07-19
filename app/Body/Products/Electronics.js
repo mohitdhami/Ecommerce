@@ -12,7 +12,7 @@ export default function Electronics() {
     return <>
     <div className='m-2 bg-slate-white p-2 rounded-xl'>
     <span className='bg-emarald-500 p-2 rounded-xl m-2'> Electronics</span>
-    <div className='flex flex-wrap align-center justify-around m-3'>
+    <div className='flex flex-wrap align-center justify-evenly m-3'>
         {
             state.map((e) => (
                 <div key = {e.id} class="max-w-xs rounded-xl overflow-hidden shadow-lg bg-neu-black m-1">
