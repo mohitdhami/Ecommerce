@@ -1,6 +1,32 @@
+'use client'
+
 import Link from "next/link";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import app from "../../Firebase/Firebase";
 
 export default function UserLogin() {
+  //Validating the User Trying to Login
+  function emailValidation(event) {
+    event.preventDefault();
+
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    const auth = getAuth(app);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+        alert("You are succesfully Logged in " + user.email);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert("Sorry, We cannot let you in " + user.email);
+      });
+  }
     return (
         <>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -11,7 +37,7 @@ export default function UserLogin() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" onSubmit={emailValidation}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Email address
