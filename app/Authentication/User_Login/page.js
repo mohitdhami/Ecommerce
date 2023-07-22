@@ -3,8 +3,11 @@
 import Link from "next/link";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../../Firebase/Firebase";
+import { useRouter } from 'next/navigation'
 
 export default function UserLogin() {
+  const router = useRouter();
+
   //Validating the User Trying to Login
   function emailValidation(event) {
     event.preventDefault();
@@ -13,19 +16,30 @@ export default function UserLogin() {
     const password = event.target.password.value;
 
     const auth = getAuth(app);
+
+
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(
+        async (userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        console.log(user);
-        alert("You are succesfully Logged in " + user.email);
-        // ...
+
+        const userProfile = {
+          uid: user.uid,
+        }
+        localStorage.setItem('user', JSON.stringify(userProfile));
+
+        router.push('/');
+
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert("Sorry, We cannot let you in " + user.email);
+        console.log("EC:", errorCode, "EM: ", errorMessage);
+        alert("Sorry, We cannot let you in ");
       });
+
+
   }
     return (
         <>
@@ -59,11 +73,11 @@ export default function UserLogin() {
                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                   Password
                 </label>
-                <div className="text-sm">
+                {/* <div className="text-sm">
                   <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                     Forgot password?
                   </a>
-                </div>
+                </div> */}
               </div>
               <div className="mt-2">
                 <input

@@ -8,6 +8,9 @@ export default function Electronics() {
       setState(data);
     }
 
+    const [cartItems, updateCartItems] = useState([]);
+
+
     useEffect(() => { getData(); }, [])
     return <>
     <div className='flex justify-center my-3'>
@@ -27,7 +30,11 @@ export default function Electronics() {
                     <p className='p-1 text-left'>
                         <span className="rounded-xl bg-rose-600 text-slate-white px-2 m-1">Price</span>
                         {e.price}$</p>
-                    <p className='bg-neu-black text-slate-white p-1 cursor-pointer text-center'>
+                    <p className='bg-neu-black text-slate-white p-1 cursor-pointer text-center'
+                    onClick={() => {
+                        updateCartItems(e)
+                        console.log(cartItems);
+                    }}>
                     Add to Cart
                     </p>
                     </div>

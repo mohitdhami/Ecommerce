@@ -1,7 +1,5 @@
 'use client'
 
-import Header from './Header/Header.js';
-import Banner from './Body/Banner.js';
 import Products from './Body/Products.js';
 import Footer from './Footer/Footer.js';
 
