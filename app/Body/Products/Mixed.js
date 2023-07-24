@@ -7,13 +7,13 @@ import { doc, getDoc, setDoc} from "firebase/firestore";
 export default function Mixed() { 
     const db = getFirestore(app);
     const [userCart, updateUserCart] = useState([]); 
-    async function addToCartFirestore(userId) {
+    async function addToCartFirestore(userId, itemProfile) {
             try {
               // Create a reference to the user document in the "users" collection
               const userRef = doc(db, "users", userId);
           
               // Set the array as a field in the user document
-              await setDoc(userRef, { CartItems: userCart }, { merge: true });
+              await setDoc(userRef, { CartItems:  itemProfile}, { merge: true });
           
               console.log("Array data added to the user document successfully!");
             } catch (error) {
@@ -53,14 +53,23 @@ export default function Mixed() {
                         <span className="rounded-xl bg-rose-600 text-slate-white px-2 m-1">Price</span>
                         {e.price}$</p>
                     <p className='bg-neu-black text-slate-white p-1 cursor-pointer text-center'
-                    onClick={(e) => {
-                        updateUserCart(e);
+                    onClick={() => {
+                        const itemProfile = {
+                            tile: e.title,
+                            description: e.description,
+                            price: e.price,
+                            src: e.image
+                        };
+                        updateUserCart(itemProfile);
+                        console.log(userCart);
                         const data = localStorage.getItem('user');
                         const user = data ? JSON.parse(data) : null;
                 
                         user ? updateUserId(user.uid) : null;
-                        userid ? addToCartFirestore(userid) : null;
-                    }}>Add to Cart </p>
+                        userid ? addToCartFirestore(userid, itemProfile) : null;
+                        console.log("Executed on click")
+                        router.push('/Checkout')
+                    }}>Buy</p>
                 </div>
             ))
         }

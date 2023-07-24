@@ -68,7 +68,7 @@ export default function Header() {
                 </div>
                 </Link>
 
-                {/* Icon and Button: Shopping Cart */}
+                {/* Icon and Button: Orders */}
                 <Link href="/Orders/">
                 <div className="bg-slate-white rounded-md cursor-pointer p-0.5 pl-2 pr-2 ml-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

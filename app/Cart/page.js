@@ -1,3 +1,6 @@
+import app from '../Firebase/Firebase';
+import { getFirestore } from "firebase/firestore";
+
 export default function Cart() {
     return (
         <>
@@ -5,6 +8,8 @@ export default function Cart() {
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                     Items in your Shopping Cart
+
+
                 </h2>
             </div>
         </div>

@@ -1,35 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ecommerce application
+### The E-commerce application offers users a user-friendly interface that enables them to efficiently search for items, browse through a comprehensive list of available products, add selected items to their cart, and seamlessly proceed with the purchase process.
 
-## Getting Started
+## Tech Stack
+ 
+- Next JS
+- Firebase (Authentication, Firestore)
+- TailwindCSS
 
-First, run the development server:
+## Key Features of Ecommerce Application
+The E-commerce Application is a comprehensive online platform designed to provide users with a seamless shopping experience. With its user-friendly interface and robust features, the application allows users to effortlessly search for items, explore a wide range of products, add them to their cart, and proceed with the purchasing process.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### 1. Search Product (Not Implemented)
+- The application offers a powerful search functionality that enables users to quickly find desired items based on various criteria such as keywords, categories, brands, or price range.
+- This feature ensures an efficient and convenient shopping experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Product Listings
+- The application showcases a vast catalog of products, presenting users with a comprehensive list of available items. 
+- Each product listing includes detailed information such as descriptions, specifications, images, and customer reviews (not implemented) to help users make informed purchasing decisions.
+- Sample Products are fetched from FakeStore API (https://fakestoreapi.com/)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Shopping Cart (Not implemented)
+- Users can add selected items to their virtual shopping cart, which acts as a temporary storage for the products they intend to purchase. 
+- The cart provides a summary of the selected items, including quantities and prices, allowing users to review and modify their choices before proceeding to checkout.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 4. User Accounts and Profiles
+- The application offers users the option to create personal accounts and profiles, providing a personalized shopping experience. 
+- Registered users can save their preferences, track their orders more efficiently, and receive personalized recommendations based on their browsing and purchase history.
+- Firebase Email-Password based Authentication service is adopted in project to validate users and make seamless experience
 
-## Learn More
+## Project Architecture </br>
+- Will be Published Later (Probably after Project completion)
 
-To learn more about Next.js, take a look at the following resources:
+## Application UI and Screenshots</br>
+<p align="center">
+<img src="/screenshots/Screenshot_home_1.png">
+<img src="/screenshots/Screenshot_home_2.png">
+<img src="/screenshots/Screenshot_sign_in.png">
+<img src="/screenshots/Screenshot_Register_account.png">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Ecommerce

@@ -28,7 +28,7 @@ export default function Jewellery() {
                     <span className="rounded-xl bg-rose-600 text-slate-white px-2 m-1">Price</span>
                     {e.price}$</p>
                 <p className='bg-neu-black text-slate-white p-1 cursor-pointer text-center'>
-                Add to Cart
+                Buy
                 </p>
                 </div>
             </div>

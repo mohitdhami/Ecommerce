@@ -35,7 +35,7 @@ export default function Electronics() {
                         updateCartItems(e)
                         console.log(cartItems);
                     }}>
-                    Add to Cart
+                    Buy
                     </p>
                     </div>
                 </div>
