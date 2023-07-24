@@ -1,5 +1,6 @@
 # Ecommerce application
-### The E-commerce application offers users a user-friendly interface that enables them to efficiently search for items, browse through a comprehensive list of available products, add selected items to their cart, and seamlessly proceed with the purchase process.
+
+The E-commerce application offers users a user-friendly interface that enables them to efficiently search for items, browse through a comprehensive list of available products, add selected items to their cart, and seamlessly proceed with the purchase process.
 
 ## Tech Stack
  
@@ -8,7 +9,6 @@
 - TailwindCSS
 
 ## Key Features of Ecommerce Application
-The E-commerce Application is a comprehensive online platform designed to provide users with a seamless shopping experience. With its user-friendly interface and robust features, the application allows users to effortlessly search for items, explore a wide range of products, add them to their cart, and proceed with the purchasing process.
 
 ### 1. Search Product (Not Implemented)
 - The application offers a powerful search functionality that enables users to quickly find desired items based on various criteria such as keywords, categories, brands, or price range.
@@ -33,10 +33,10 @@ The E-commerce Application is a comprehensive online platform designed to provid
 
 ## Application UI and Screenshots</br>
 <p align="center">
-<img src="/screenshots/Screenshot_home_1.png">
-<img src="/screenshots/Screenshot_home_2.png">
-<img src="/screenshots/Screenshot_sign_in.png">
-<img src="/screenshots/Screenshot_Register_account.png">
+<img src="/screenshots/Screenshot_home_1.png"> <br/>
+<img src="/screenshots/Screenshot_home_2.png"> <br/>
+<img src="/screenshots/Screenshot_Sign_in.png"> <br/>
+<img src="/screenshots/Screenshot_Register_account.png"> <br/>
 
 </p>
 
